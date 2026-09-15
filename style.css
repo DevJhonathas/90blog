@@ -1,0 +1,32 @@
+:root{
+  --main-bgk-color: hsl(256, 100%, 20%);
+  --main-bg-color: hsl(0, 0%, 100%);
+}
+
+body{
+  color: var(--main-bg-color)
+}
+
+#not_found{
+    background-color: var(--main-bgk-color);
+  }
+
+.buttons_gifs{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.buttons_gifs > ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line_section{
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+    gap: 5px;
+    margin: 0; padding: 0;
+}
