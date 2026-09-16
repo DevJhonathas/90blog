@@ -3,10 +3,18 @@
   --main-bg-color: hsl(0, 0%, 100%);
 }
 
-body{
-  color: var(--main-bg-color)
+html {
+    width: 100%;
+    height: 100%;
 }
 
+body {
+    width: 100%;
+    min-height: 96vh;
+    margin: 0;
+}
+
+/*Not Found */
 #not_found{
     background-color: var(--main-bgk-color);
   }
@@ -14,7 +22,7 @@ body{
 .buttons_gifs{
   display: flex;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .buttons_gifs > ul{
