@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The web site of Johnny the Strange Guy</title>
-
+  <link rel="icon" type="image/x-icon" href="/src/img/favicon.ico">
     <link rel="stylesheet" href="./style.css">
     <script src="/src/assets/snow.js"></script>
     <script src="/src/assets/titleSite.js"></script>
     <script type="module" src="/src/assets/ghostCursor.js"></script>
     
+    
+
     <style>
       body {
         color: var(--main-bg-color);
@@ -35,17 +37,118 @@
         font-family: PC98;
         font-size:62px;
         color:white;
-        -webkit-text-stroke-width: .8px;
+        -webkit-text-stroke-width: .3px;
         -webkit-text-stroke-color: black;
       }
     </style>
   </head>
   <body>
-    <h1 id="PC98">Welcome to johnny the strange guy!</h1>
 
-    <p>Click in the link to start. <br><a href="https://johnnythestrangeguy.neocities.org/src/main">Enter</a></p>
+    <div id="youtube-player"
+         style="position:absolute; opacity:0; pointer-events:none;">
+    </div>
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <script>
+    let player;
+    
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-player', {
+            width: '200',
+            height: '200',
+            videoId: 'Xy-uXUa5rE0',
+            playerVars: {
+                autoplay: 1,
+                controls: 0,
+                loop: 1,
+                playlist: 'Xy-uXUa5rE0'
+            },
+            events: {
+                onReady: function(event) {
+                    event.target.setVolume(2);
+                    event.target.playVideo();
+                }
+            }
+        });
+    }
+    </script>
+    <main class="main_center">
+    
+    <div class="bounce" id="PC98">
+      <mark style="--i: 0">T</mark>
+      <mark style="--i: 1">h</mark>
+      <mark style="--i: 2">e</mark>
+      <mark style="--i: 3"> </mark>
+      <mark style="--i: 4">S</mark>
+      <mark style="--i: 5">t</mark>
+      <mark style="--i: 6">r</mark>
+      <mark style="--i: 7">a</mark>
+      <mark style="--i: 8">n</mark>
+      <mark style="--i: 9">g</mark>
+      <mark style="--i: 10">e</mark>
+      <mark style="--i: 11"> </mark>
+      <mark style="--i: 12">W</mark>
+      <mark style="--i: 13">o</mark>
+      <mark style="--i: 14">r</mark>
+      <mark style="--i: 15">l</mark>
+      <mark style="--i: 16">d</mark>
+      <mark style="--i: 17"> </mark>
+      <mark style="--i: 18">O</mark>
+      <mark style="--i: 19">f</mark>
+      <mark style="--i: 20"> </mark>
+      <mark style="--i: 1">J</mark>
+      <mark style="--i: 2">o</mark>
+      <mark style="--i: 3">h</mark>
+      <mark style="--i: 4">n</mark>
+      <mark style="--i: 5">n</mark>
+      <mark style="--i: 6">y</mark>
+      <mark style="--i: 7">, </mark>
+      <mark style="--i: 7"> </mark>
+      <mark style="--i: 8">T</mark>
+      <mark style="--i: 9">h</mark>
+      <mark style="--i: 10">e</mark>
+      <mark style="--i: 11"> </mark>
+      <mark style="--i: 12">S</mark>
+      <mark style="--i: 13">t</mark>
+      <mark style="--i: 14">r</mark>
+      <mark style="--i: 15">a</mark>
+      <mark style="--i: 16">n</mark>
+      <mark style="--i: 17">g</mark>
+      <mark style="--i: 18">e</mark>
+      <mark style="--i: 19"> </mark>
+      <mark style="--i: 20">G</mark>
+      <mark style="--i: 21">u</mark>
+      <mark style="--i: 22">y</mark>
+    </div>
 
-    <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+    
+      <!-- <h1 id="PC98">The strange world of Johnny the strange guy!</h1> -->
+      <div class="box_card">
+        <a href="https://johnnythestrangeguy.neocities.org/src/main" ><img src="./src/img/old_computer.png" class="computer" alt="Old computer"></a>
+        <p id="text2">Click in the computer.</p>
+        <div class="warning_msg">
+          <p><strong>Warning:</strong> This Website is not mobile friendly. Access is recommended on a computer.</p>
 
+          <marquee behavior="scroll" direction="left"> Enjoy my first blog... B- ) ... You will see a lot of strange things about my life.</marquee>
+        </div>
+      </div>
+      <div class="patners">
+        <ul>
+          <li class="list_88x31">
+            <a href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+          </li>
+          <li class="list_88x31">
+            <a href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+          </li>
+          <li class="list_88x31">
+            <a href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+          </li>
+          <li class="list_88x31">
+            <a href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+          </li>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
