@@ -6,7 +6,7 @@ html {
 body {
     /* overflow: hidden; */
     margin: 0;
-    min-height: 97.5vh;
+    min-height: 100vh;
     background:
         repeating-linear-gradient(
             0deg,
@@ -24,28 +24,43 @@ body {
     background-size: cover;
 }
 
-.screen {
-  display:none;
-  width: 800px;
-  min-height: 100vh;
-  margin: 0px auto;
-  padding:10px 0px 10px;
-  background:white;
+/* Container que centraliza a tela */
+.screen-wrapper {
+    position: fixed;
+    inset: 0; 
 
-    border-left: 2px solid #12303a;
-    border-right: 2px solid #12303a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0; padding: 0;
+    overflow: hidden;
+}
+
+
+.screen {
+  /* display:none; --Active after finish page */
+  width: 1200px;
+  /* min-height: 100vh; */
+  margin: 0px auto;
+  /* padding:10px 0px 10px; */
+  background:rgba(192, 197, 201);
+
+  border-left: 2px solid #12303a;
+  border-right: 2px solid #12303a;
+
+  animation: open 1.5s ease-out forwards;
   
-  animation-duration: 3s;
-  animation-name: open;
+
+  overflow: hidden;
 }
 
 @keyframes open{
   0%{
-    min-height:0px;
-    transform: translate(-50%, 50%)
+    height: 0;
   }
   100%{
-    min-height:95vh;
+    height:100vh;
+
   }
 }
 
@@ -59,11 +74,21 @@ body {
 }
 
 .title{
-background-size: 300vw 300vw;
-text-align: -webkit-center;
-background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, #0f0 14.28%, #0ff 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+  background-size: 300vw 300vw;
+  text-align: -webkit-center;
+  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, #0f0 14.28%, #0ff 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+  /* text-shadow: 5px 2px #020609; */
+  -webkit-animation: 'slide' 30s infinite linear forwards;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 
--webkit-animation: 'slide' 30s infinite linear forwards;
--webkit-text-fill-color: transparent;
--webkit-background-clip: text;
+.menu-win-95{
+  /* margin: 0; */
+  background-color: rgba(131, 136, 140);
+  margin: 2px 2px 0;
+}
+
+.menu-win-95 > h1{
+  margin: 0;
 }

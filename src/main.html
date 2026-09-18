@@ -24,7 +24,7 @@
             },
             events: {
                 onReady: function(event) {
-                    event.target.setVolume(5);
+                    event.target.setVolume(25);
                     event.target.playVideo();
                 }
             }
@@ -33,13 +33,27 @@
     </script>
   </head>
   <body>   
-    <div class="screen start">
-        <div id="youtube-player"
-            style="position:absolute; opacity:0; pointer-events:none;">
+    <div class="screen-wrapper">
+        <div class="screen start">
+            <div id="youtube-player"
+                style="position:absolute; opacity:0; pointer-events:none;">
+            </div>
+            <main>
+                <div class="menu-win-95">
+                    <h1 class="title">Welcome to my BLOG.</h1>
+                </div>    
+                <nav>
+                    <ul>
+                        <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Home</a></li>
+                        <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Art</a></li>
+                        <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Robotic</a></li>
+                        <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Codes</a></li>
+                        <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Movies</a></li>
+                        <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Games</a></li>
+                    </ul>
+                </nav>
+            </main>
         </div>
-        <main>
-            <h1 class="title">Welcome to my BLOG.</h1>
-        </main>
     </div>
 
   </body>

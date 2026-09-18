@@ -3,9 +3,9 @@ function tb8_makeArray(n) {
   return this.length;
 }
 tb8_messages = new tb8_makeArray(3);
-tb8_messages[0] = "Welcome to the world of Johnny :)";
-tb8_messages[1] = "The Strange guy";
-tb8_messages[2] = "B-<";
+tb8_messages[0] = "Welcome to the world ";
+tb8_messages[1] = "of Johnny :)";
+tb8_messages[2] = "The Strange guy B-<";
 tb8_rptType = "infinite";
 tb8_rptNbr = 5;
 tb8_speed = 50;
