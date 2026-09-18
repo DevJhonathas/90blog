@@ -1,0 +1,69 @@
+html {
+    background: #020609;
+    color:white;
+}
+
+body {
+    /* overflow: hidden; */
+    margin: 0;
+    min-height: 97.5vh;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.015) 0px,
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px,
+            transparent 3px
+        ),
+        #020609;
+
+    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1336601.jpg&f=1&nofb=1&ipt=2b69a36b1543cc7067fbe179ce79dc49b5420dfd37241b617f373b008e939faf) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.screen {
+  display:none;
+  width: 800px;
+  min-height: 100vh;
+  margin: 0px auto;
+  padding:10px 0px 10px;
+  background:white;
+
+    border-left: 2px solid #12303a;
+    border-right: 2px solid #12303a;
+  
+  animation-duration: 3s;
+  animation-name: open;
+}
+
+@keyframes open{
+  0%{
+    min-height:0px;
+    transform: translate(-50%, 50%)
+  }
+  100%{
+    min-height:95vh;
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 300vw;
+  }
+}
+
+.title{
+background-size: 300vw 300vw;
+text-align: -webkit-center;
+background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, #0f0 14.28%, #0ff 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+
+-webkit-animation: 'slide' 30s infinite linear forwards;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+}

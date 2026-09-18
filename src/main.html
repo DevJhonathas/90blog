@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./main.css" rel="stylesheet" type="text/css" media="all">
+    <script src="./main.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="/src/assets/titleSite.js"></script>
     <script>
@@ -31,11 +32,15 @@
     }
     </script>
   </head>
-  <body>
-    <div id="youtube-player"
-         style="position:absolute; opacity:0; pointer-events:none;">
+  <body>   
+    <div class="screen start">
+        <div id="youtube-player"
+            style="position:absolute; opacity:0; pointer-events:none;">
+        </div>
+        <main>
+            <h1 class="title">Welcome to my BLOG.</h1>
+        </main>
     </div>
-    
-    
+
   </body>
 </html>
