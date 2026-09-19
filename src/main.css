@@ -17,12 +17,13 @@ body {
         ),
         #020609;
 
-    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1336601.jpg&f=1&nofb=1&ipt=2b69a36b1543cc7067fbe179ce79dc49b5420dfd37241b617f373b008e939faf) no-repeat center center fixed; 
+    background: url(https://gifcity.carrd.co/assets/images/gallery66/7afcf5b7.gif?v=3fc8f5cd) repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 
 /* Container que centraliza a tela */
 .screen-wrapper {
@@ -38,7 +39,7 @@ body {
 
 
 .screen {
-  /* display:none; --Active after finish page */
+  display:none;/* --Active after finish page  */
   width: 1200px;
   /* min-height: 100vh; */
   margin: 0px auto;
@@ -92,3 +93,12 @@ body {
 .menu-win-95 > h1{
   margin: 0;
 }
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  list-style-type: none;
+  gap: 10px;
+  margin-right: 20px;
+  }

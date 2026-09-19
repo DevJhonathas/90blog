@@ -1,3 +1,3 @@
-// setTimeout(() => {
-//   document.querySelector(".screen.start").style.display = "block";
-// }, 8500);
+setTimeout(() => {
+  document.querySelector(".screen.start").style.display = "block";
+}, 3500);
