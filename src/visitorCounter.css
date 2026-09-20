@@ -1,0 +1,78 @@
+/* <html id="visitorCounter">
+    ::before
+    <body id="visitorCounterDisplay">
+        <div class="digit" data-n="#">
+            ::before
+        </div>
+        . . .
+        (depends on the digit count.)
+        . . .
+        <div class="digit" data-n="#"> . . . </div>
+    </body>
+</html> */
+
+:where(*, *::after, *::before) {box-sizing: border-box;}
+:where(#visitorCounter, #visitorCounterDisplay, .digit) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0;padding:0;
+}
+:where(#visitorCounter) {
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    border: 1px solid #000;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    overflow: clip;
+
+    &::before {
+        content: "Visitors:";
+        white-space: nowrap;
+    }
+}
+#visitorCounter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#visitorCounterDisplay {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center
+    justify-content: center;
+    width: auto;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    gap: 0.25rem;
+}
+:where(.digit) {
+    flex: 1;
+    border: 1px solid #000;
+    font-size: 1rem;
+    background-size: 100% 100%;
+    &::before {content: attr(data-n)}
+}
+
+#visitorCounter{
+  display: flex;
+  flex-direction:row;
+  border:hidden;  
+}
+
+.digit{
+  color: #00ff99;
+  text-shadow: 0 0 1px #00ff99, 0 0 2px #00ff99, 0 0 4px #00ff99;
+  border:hidden;
+}
