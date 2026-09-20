@@ -51,14 +51,41 @@
                         <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Movies</a></li>
                         <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Games</a></li>
                         <li>
-                            <iframe
+                            <!-- <iframe
                                 src="https://404city.neocities.org/widget/visitorCounterV6?sitename=johnnythestrangeguy&digits=6&scramble=true&css=https://johnnythestrangeguy.neocities.org/visitorCounter.css"
                                 width="240"
                                 height="95"
                                 frameborder="0"
                                 scrolling="no"
                                 title="Visitors">
-                            </iframe>
+                            </iframe> -->
+                            <div id="visitorCount">000000</div>
+
+                            <script>
+                            async function loadVisitors() {
+                                try {
+                                    const response = await fetch(
+                                        "http://localhost:3000/api/neocities-info"
+                                    );
+
+                                    if (!response.ok) {
+                                        throw new Error(`HTTP ${response.status}`);
+                                    }
+
+                                    const data = await response.json();
+
+                                    const views = data.info.views;
+
+                                    document.getElementById("visitorCount").textContent =
+                                        String(views).padStart(6, "0");
+
+                                } catch (error) {
+                                    console.error("Erro:", error);
+                                }
+                            }
+
+                            loadVisitors();
+                            </script>
                         </li>
                     </ul>
                 </nav>
