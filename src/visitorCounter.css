@@ -1,0 +1,12 @@
+:where(.digit){
+  color: #00ff99;
+  text-shadow: 0 0 1px #00ff99, 0 0 2px #00ff99, 0 0 4px #00ff99;
+
+  &::before {
+    content: "Visitors:";
+    color:black;
+    margin:5px;
+    text-shadow:none;
+    white-space: nowrap;
+  }
+}

@@ -1,3 +1,18 @@
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.35) #daeff5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.4);
+  border-radius: 100%;
+}
+
 html {
     background: #020609;
     color:white;
@@ -16,12 +31,14 @@ body {
             transparent 3px
         ),
         #020609;
+        background: rgb(20, 20, 20);
 
-    background: url(https://gifcity.carrd.co/assets/images/gallery66/7afcf5b7.gif?v=3fc8f5cd) repeat center center fixed; 
-    -webkit-background-size: cover;
+    /* Background com imagem */
+    /* url(https://gifcity.carrd.co/assets/images/gallery66/7afcf5b7.gif?v=3fc8f5cd) repeat center center fixed;  */
+    /* -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
@@ -39,22 +56,28 @@ body {
 
 
 .screen {
-  display:none;/* --Active after finish page  */
-  width: 1200px;
-  /* min-height: 100vh; */
-  margin: 0px auto;
+  /* display:block; --Active after finish page  */
+  width: 940px;
+  min-height: 95vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
   /* padding:10px 0px 10px; */
   background:rgba(192, 197, 201);
 
   border-left: 2px solid #12303a;
   border-right: 2px solid #12303a;
 
-  animation: open 1.5s ease-out forwards;
-  
-
+  animation: open .5s ease-out forwards;
   overflow: hidden;
 }
 
+main{
+  min-height: 97vh;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
+/*  Abre a pagina do centro para cima. 
 @keyframes open{
   0%{
     height: 0;
@@ -63,8 +86,9 @@ body {
     height:100vh;
 
   }
-}
+} */
 
+/* Animation of rainbow title 
 @keyframes slide {
   0% {
     background-position-x: 0%;
@@ -72,16 +96,26 @@ body {
   100% {
     background-position-x: 300vw;
   }
-}
+} */
 
+/* Make rainbow title  
 .title{
   background-size: 300vw 300vw;
   text-align: -webkit-center;
   background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, #0f0 14.28%, #0ff 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-  /* text-shadow: 5px 2px #020609; */
+   text-shadow: 5px 2px #020609; 
   -webkit-animation: 'slide' 30s infinite linear forwards;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+} */
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  box-shadow: 5px 5px rgb(81, 81, 82);
+  font-size: 2.5em;
+  text-align: -webkit-center;
 }
 
 .menu-win-95{
@@ -102,3 +136,19 @@ body {
   gap: 10px;
   margin-right: 20px;
   }
+
+.uploads{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+.under_constructions{
+  display:flex;
+  flex-direction:row;
+  list-style-type:none;
+  gap: 10px;
+}
+
+  
