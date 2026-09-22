@@ -108,26 +108,23 @@ main{
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 } */
+
+.title-menu{
+  /* margin: 0; */
+  background-color: rgb(100, 86, 232);
+  margin: 4px 4px;
+  border:  thick double  #020609;
+}
+
 .title{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
-  box-shadow: 5px 5px rgb(81, 81, 82);
+  /* box-shadow: 5px 5px rgb(81, 81, 82); */
   font-size: 2.5em;
   text-align: -webkit-center;
 }
-
-.menu-win-95{
-  /* margin: 0; */
-  background-color: rgba(131, 136, 140);
-  margin: 2px 2px 0;
-}
-
-.menu-win-95 > h1{
-  margin: 0;
-}
-
 .navbar{
   display: flex;
   flex-direction: row;
