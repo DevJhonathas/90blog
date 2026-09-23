@@ -30,15 +30,10 @@ body {
             transparent 1px,
             transparent 3px
         ),
-        #020609;
-        background: rgb(20, 20, 20);
 
-    /* Background com imagem */
-    /* url(https://gifcity.carrd.co/assets/images/gallery66/7afcf5b7.gif?v=3fc8f5cd) repeat center center fixed;  */
-    /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
+    url(https://sadhost.neocities.org/images/tiles/background038.gif) repeat center center fixed; 
+    /* https://sadhost.neocities.org/images/tiles/blkwarp.gif - DODEIRA*/
+    /* https://sadhost.neocities.org/images/tiles/num.gif - CODIGOS*/
 }
 
 
@@ -62,7 +57,7 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
   /* padding:10px 0px 10px; */
-  background:rgba(192, 197, 201);
+  background:rgb(253, 254, 255);
 
   border-left: 2px solid #12303a;
   border-right: 2px solid #12303a;
@@ -111,20 +106,25 @@ main{
 
 .title-menu{
   /* margin: 0; */
-  background-color: rgb(100, 86, 232);
+  /* background-color: rgb(100, 86, 232); */
   margin: 4px 4px;
-  border:  thick double  #020609;
+  border: thick double  #020609;
+  border-style: solid;
+  border-width: 8px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200;     
+  padding: 0;
 }
 
 .title{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  color: black;
   /* box-shadow: 5px 5px rgb(81, 81, 82); */
   font-size: 2.5em;
   text-align: -webkit-center;
 }
+
 .navbar{
   display: flex;
   flex-direction: row;
