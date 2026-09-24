@@ -2,6 +2,7 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.35) #daeff5;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -14,126 +15,116 @@
 }
 
 html {
-    background: #020609;
-    color:white;
+  color:white;
 }
 
 body {
-    /* overflow: hidden; */
-    margin: 0;
-    min-height: 100vh;
-    background:
-        repeating-linear-gradient(
-            0deg,
-            rgba(255,255,255,0.015) 0px,
-            rgba(255,255,255,0.015) 1px,
-            transparent 1px,
-            transparent 3px
-        ),
+  /* overflow: hidden; */
+  margin: 0;
+  background:
+      repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.015) 0px,
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+      ),
 
-    url(https://sadhost.neocities.org/images/tiles/background038.gif) repeat center center fixed; 
-    /* https://sadhost.neocities.org/images/tiles/blkwarp.gif - DODEIRA*/
-    /* https://sadhost.neocities.org/images/tiles/num.gif - CODIGOS*/
+  url(https://sadhost.neocities.org/images/tiles/num.gif) repeat center center fixed; 
+  /* https://sadhost.neocities.org/images/tiles/blkwarp.gif - DODEIRA*/
+  /* https://sadhost.neocities.org/images/tiles/num.gif - CODIGOS*/
+  /* https://sadhost.neocities.org/images/tiles/background038.gif */
 }
 
-
-/* Container que centraliza a tela */
-.screen-wrapper {
-    position: fixed;
-    inset: 0; 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0; padding: 0;
-    overflow: hidden;
+.container{ 
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; 
+  /* ⚠️ Aparentemente os asides estão com tamanhos diferentes. Acredito que seja por conta da proporção do container referente a margin*/
+  grid-template-rows: 15vh 1fr 5vh;
+  width: 70%; height: 90vh;
+  gap: 20px; padding: 15px;
+  margin:2% 15vw;
+  /* background-color: rgb(191, 0, 255); */
 }
 
-
-.screen {
-  /* display:block; --Active after finish page  */
-  width: 940px;
-  min-height: 95vh;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  /* padding:10px 0px 10px; */
-  background:rgb(253, 254, 255);
-
-  border-left: 2px solid #12303a;
-  border-right: 2px solid #12303a;
-
-  animation: open .5s ease-out forwards;
-  overflow: hidden;
-}
-
-main{
-  min-height: 97vh;
-  overflow:scroll;
-  overflow-x:hidden;
-}
-
-/*  Abre a pagina do centro para cima. 
-@keyframes open{
-  0%{
-    height: 0;
-  }
-  100%{
-    height:100vh;
-
-  }
-} */
-
-/* Animation of rainbow title 
-@keyframes slide {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: 300vw;
-  }
-} */
-
-/* Make rainbow title  
-.title{
-  background-size: 300vw 300vw;
-  text-align: -webkit-center;
-  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, #0f0 14.28%, #0ff 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-   text-shadow: 5px 2px #020609; 
-  -webkit-animation: 'slide' 30s infinite linear forwards;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-} */
-
-.title-menu{
-  /* margin: 0; */
-  /* background-color: rgb(100, 86, 232); */
-  margin: 4px 4px;
-  border: thick double  #020609;
-  border-style: solid;
-  border-width: 8px;
-  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200;     
-  padding: 0;
-}
-
-.title{
+.header{
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  background-color: rgb(144, 0, 255);
+  border-style: solid;
+  border-width: 3px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
+  grid-column: 1 / 5;
+}
+.main-page{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+
+  background-color: blue;
+  border-style: solid;
+  border-width: 3px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
+  grid-column: 2 / 3;
+  grid-row: 2;
+
+}
+
+.aside-right{
+  background-color: red;
+  border-style: solid;
+  border-width: 3px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
+  grid-column: 1/ 2;
+  grid-row: 2;
+}
+
+.aside-left{
+  background-color: red;
+  border-style: solid;
+  border-width: 3px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
+  grid-column: 3/ 5;
+  grid-row: 2;
+}
+
+.footer{
+  background-color: white;
+  border-style: solid;
+  border-width: 3px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
+  grid-column: 1 / 5;
+  grid-row: 3;
+
+  /* height: 35px; */
+}
+
+
+/* HEADER */
+.title{
   justify-content: center;
   align-items: center;
-  color: black;
-  /* box-shadow: 5px 5px rgb(81, 81, 82); */
   font-size: 2.5em;
+  margin: 0; padding: 0;
   text-align: -webkit-center;
+  color: black;
 }
 
 .navbar{
   display: flex;
-  flex-direction: row;
   justify-content: right;
+  font-size: 1.2em;
   list-style-type: none;
   gap: 10px;
-  margin-right: 20px;
-  }
+  margin: 5px;
+}
 
+
+/* MAIN */
 .uploads{
   display:flex;
   flex-direction:column;
@@ -148,4 +139,22 @@ main{
   gap: 10px;
 }
 
-  
+/* MAIN > STATUS CAFE */
+#statuscafe {
+  width: 50%;
+  /* padding: .5em; */
+  background-color: azure;
+  border: 1px solid midnightblue;
+}
+#statuscafe-username {
+  margin-bottom: .5em;
+}
+#statuscafe-content {
+  color: black;
+  margin: 0 1em 0.5em 1em;
+}
+
+/* ⚠️ Temporário */
+h3 {
+  color: black;
+}
