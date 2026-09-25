@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <link href="./main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./assets/variables.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="./visitorCounter.css" type="text/css" media="all">
+    <!-- Windows XP Theme (include only one theme at a time) -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css" /> -->
+
+    <!-- Windows 98 Theme (include only one theme at a time) -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css@0.2.3/dist/98.css" />
+
     <script src="./main.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="/src/assets/titleSite.js"></script>
@@ -34,7 +41,6 @@
     </script> -->
   </head>
   <body>   
-    <!-- objetivo, criar header, main, 2x aside, footer, todos dentro de uma div modificando a posição com display grid 28/09/2026 -->
     <div class="container">
         <header class="header">
             <!-- <div class="img-menu"><img src="./img/car_rungif.gif" alt="car"></div> -->
@@ -88,14 +94,6 @@
                 style="position:absolute; opacity:0; pointer-events:none;">
             </div>
 
-            <!-- status cafe -->
-            <div id="statuscafe">
-                <div id="statuscafe-username"></div>
-                <div id="statuscafe-content"></div>
-            </div>
-            <script src="https://status.cafe/current-status.js?name=johnnythestrangerguy" defer>
-            </script>
-
             <div class="uploads">
                 <ul class="under_constructions">
                     <li class="constructions">
@@ -108,15 +106,58 @@
         </main>
         
         
-        <aside class="aside-left">
-            <h3>NOTHING</h3>
-        </aside>
+        <div class="left">
+            <aside class="aside-left">
+                <h3>NOTHING</h3>
+            </aside>
 
+            <aside class="aside-left">
+                <h3>NOTHING</h3>
+            </aside>
+        </div>
 
-        <aside class="aside-right">
-            <h3>NOTHING</h3>
-        </aside>
+        <div class="right">
+            <aside class="aside-right">
+                <div class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">
+                        My Computer???
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <img class="booting_computer" src="./img/backgrounds/old_computer_booting.gif" alt="old computer booting">
+                    </div>
+                </div>
+            </aside>
 
+            <aside class="aside-right">
+                <!-- status cafe -->
+                <div id="statuscafe">
+                    <div id="statuscafe-username"></div>
+                    <div id="statuscafe-content"></div>
+                </div>
+                <script src="https://status.cafe/current-status.js?name=johnnythestrangerguy" defer>
+                </script>
+            </aside>
+            
+            <div class="second">
+                <aside class="second-aside-right">
+                    <h3>NOTHING</h3>
+                </aside>
+                <aside class="second-aside-right ">
+                    <div class="window">
+                        <div class="title-bar">
+                            <div class="title-bar-text">
+                                <marquee behavior="scroll" direction="left"> happy happy happy happy happy happy happy happy...</marquee>
+                            </div>
+                        </div>
+                    <div class="window-body">
+                        <img class="happy_emote" src="./img/backgrounds/happy_emote.webp" alt="windows">
+                    </div>
+                </div>
+                </aside>
+            </div>
+        </div>
 
         <footer class="footer">
             <h3>NOTHING</h3>

@@ -65,7 +65,7 @@ body {
 }
 
 .box_card {
-  background-color: var(--card-box-bgk-color);
+  background-color: var(--card-box-bg-color);
   height: 30em;
   margin-top: 3em;
   border-style: solid;
@@ -79,7 +79,7 @@ body {
   margin-top: 3em;
   justify-content: center;
   align-items: center;
-  color: var(--card-box-bg-color);
+  color: var(--card-box-color);
 }
 
 #text2 {
@@ -133,7 +133,7 @@ body {
 }
 
 marquee{
-  color: var(--card-box-bg-color);
+  color: var(--card-box-color);
   max-width: 25em;
 }
 
@@ -142,7 +142,7 @@ marquee{
   text-wrap: wrap;  
   text-align: center;
   max-width: 25em;
-  color: var(--card-box-bg-color);
+  color: var(--card-box-color);
 }
 
 
@@ -164,7 +164,7 @@ marquee{
 
 /*Not Found */
 #not_found{
-    background-color: var(--main-bgk-color);
+    background-color: var(--notfound-bg-color);
   }
 
 .buttons_gifs{

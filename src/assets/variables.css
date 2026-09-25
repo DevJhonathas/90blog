@@ -1,13 +1,13 @@
 :root{
   /* notfound */
-  --main-bgk-color: hsl(256, 100%, 20%);
-  --main-bg-color: hsl(0, 0%, 100%);
+  --notfound-bg-color: hsl(256, 100%, 20%);
+  --notfound-color: hsl(0, 0%, 100%);
 
   /* index */
-  --card-box-bgk-color:  hsl(0, 0%, 93%);
-  --card-box-bg-color: hsl(0, 0%, 0%);
+  --card-box-bg-color:  hsl(0, 0%, 93%);
+  --card-box-color: hsl(0, 0%, 0%);
   --bounce-mark-color: hsl(0, 0%, 100%);
 
     /* main */
-    
+    --main-bg-color: hsl(255, 18%, 44%)
   }
