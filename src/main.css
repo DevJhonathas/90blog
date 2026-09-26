@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "CustomFont";
+  src: url('./assets/fonts/WesaysopersonaluseBold-L3oOZ.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -30,7 +37,7 @@ body {
           transparent 3px
       ),
 
-  url(https://sadhost.neocities.org/images/tiles/background038.gif) repeat center center fixed; 
+  url(https://64.media.tumblr.com/e68446d3475dbf7713b18088912caf14/65d95d712473120c-73/s250x400/6f9ca7025bc12a599300fad77cb09b5f959cbb01.gifv)
   /* https://sadhost.neocities.org/images/tiles/blkwarp.gif - DODEIRA*/
   /* https://sadhost.neocities.org/images/tiles/num.gif - CODIGOS*/
   /* https://sadhost.neocities.org/images/tiles/background038.gif */
@@ -53,7 +60,7 @@ body {
 
 .header{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
 
   border-style: solid;
@@ -131,10 +138,18 @@ body {
 
 
 /* HEADER */
-.title{
+.title-menu{
+  display:flex;
   justify-content: center;
-  align-items: center;
-  font-size: 2.5em;
+  align-items: end;
+
+  margin: 0; padding:0;
+}
+
+.title{
+  font-family: 'CustomFont', sans-serif;
+  font-size: 7em;
+
   margin: 0; padding: 0;
   text-align: -webkit-center;
   color: black;
@@ -144,12 +159,25 @@ body {
 .navbar{
   display: flex;
   justify-content: right;
-  font-size: 1.2em;
+  font-size: 1.5em;
   list-style-type: none;
   gap: 10px;
   margin: 5px;
 }
 
+a:active, a:visited, a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:active, a:visited, a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: red;
+}
 
 /* MAIN */
 .uploads{
@@ -243,3 +271,9 @@ h3 {
   height: 22vh;
 }
 
+.dangaronpa{
+  display: block;
+  padding: 5px;
+  max-width: 8vw;    
+  height: 22vh;
+}
