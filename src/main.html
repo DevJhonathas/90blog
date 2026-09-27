@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <link href="./main.css" rel="stylesheet" type="text/css" media="all">
-    <link href="./assets/variables.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="/src//img/favicon.ico">
     <link rel="stylesheet" href="./visitorCounter.css" type="text/css" media="all">
     <!-- Windows XP Theme (include only one theme at a time) -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css" /> -->
@@ -52,59 +52,72 @@
 
 
         <main class="main-page">
-            <div id="youtube-player"
-                style="position:absolute; opacity:0; pointer-events:none;">
-            </div>
-            <nav>
-                <ul class="navbar">
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/main">Home</a></li>
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Art</a></li>
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/robitc">Robotic</a></li>
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/programing">Codes</a></li>
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/movies">Movies</a></li>
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/games">Games</a></li>
-                    <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/books">Books</a></li>
-                    <li>
-                    <div class="visitorCounterDisplay">
-                        <div class="digit" data-n="#" id="visitorCount">...</div>
+                <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <marquee behavior="scroll" direction="left">Welcome to my personal site!!! Johnny The Strange Guy</marquee>
                     </div>
-                    <script>
-                        async function loadVisitors() {
-                            try {
-                                const response = await fetch(
-                                    "http://localhost:3000/api/neocities-info"
-                                );
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div id="main-content" class="window-body">
+                    <div id="youtube-player" style="position:absolute; opacity:0; pointer-events:none;"></div>
+                    <nav>
+                        <ul class="navbar">
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/main">Home</a></li>
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/art">Art</a></li>
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/robitc">Robotic</a></li>
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/programing">Codes</a></li>
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/movies">Movies</a></li>
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/games">Games</a></li>
+                            <li class="pages"><a href="https://johnnythestrangeguy.neocities.org/src/pages/books">Books</a></li>
+                            <li>
+                            <div class="visitorCounterDisplay">
+                                <div class="digit" data-n="#" id="visitorCount">...</div>
+                            </div>
+                            <script>
+                                async function loadVisitors() {
+                                    try {
+                                        const response = await fetch(
+                                            "http://localhost:3000/api/neocities-info"
+                                        );
 
-                                if (!response.ok) {
-                                    throw new Error(`HTTP ${response.status}`);
+                                        if (!response.ok) {
+                                            throw new Error(`HTTP ${response.status}`);
+                                        }
+
+                                        const data = await response.json();
+
+                                        const views = data.info.views;
+
+                                        document.getElementById("visitorCount").textContent =
+                                            String(views).padStart(6, "0");
+
+                                    } catch (error) {
+                                        console.error("Erro:", error);
+                                    }
                                 }
+                                loadVisitors();
+                            </script>
+                            </li>
+                        </ul>
+                    </nav>
 
-                                const data = await response.json();
-
-                                const views = data.info.views;
-
-                                document.getElementById("visitorCount").textContent =
-                                    String(views).padStart(6, "0");
-
-                            } catch (error) {
-                                console.error("Erro:", error);
-                            }
-                        }
-                        loadVisitors();
-                    </script>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="uploads">
-                <ul class="under_constructions">
-                    <li class="constructions">
-                        <img src="/src/img/under_construction.gif" alt="Github">
-                    </li>
-                </ul>
-                <!-- <p>Check out my GitHub for the latest updates!</p>
-                <a href="https://github.com/DevJhonathas/90blog"><img class="github" src="/src/img/github.png" alt="Github"></a> -->
+                    <div class="uploads">
+                        <ul class="under_constructions">
+                            <li class="constructions">
+                                <img src="/src/img/under_construction.gif" alt="Github">
+                            </li>
+                        </ul>
+                        <!-- <p>Check out my GitHub for the latest updates!</p>
+                        <a href="https://github.com/DevJhonathas/90blog"><img class="github" src="/src/img/github.png" alt="Github"></a> -->
+                    </div>
+                </div>
             </div>
+            
         </main>
         
         
@@ -113,7 +126,7 @@
                 <div class="window">
                     <div class="title-bar">
                         <div class="title-bar-text">
-                            <marquee behavior="scroll" direction="left">ERROR: M̷e̸m̴o̷r̶i̵e̶  n̴͉̾̕o̶̡͝ẗ̷͇́ found..................</marquee>
+                            <marquee behavior="scroll" direction="left">ERROR: Chat Not Found...</marquee>
                         </div>
                         <div class="title-bar-controls">
                           <button aria-label="Minimize"></button>
@@ -173,10 +186,10 @@
                 </div>
                 <script src="https://status.cafe/current-status.js?name=johnnythestrangerguy" defer>
                 </script> -->
-                                <div class="window">
+                <div class="window">
                     <div class="title-bar">
                         <div class="title-bar-text">
-                            <marquee behavior="scroll" direction="left">ERROR: M̷e̸m̴o̷r̶i̵e̶  n̴͉̾̕o̶̡͝ẗ̷͇́ found..................</marquee>
+                            <marquee behavior="scroll" direction="left">Buttons 88x31... Buttons 88x31... Buttons 88x31...</marquee>
                         </div>
                         <div class="title-bar-controls">
                           <button aria-label="Minimize"></button>
@@ -195,7 +208,7 @@
                         <div class="window">
                             <div class="title-bar">
                                 <div class="title-bar-text">
-                                    <marquee behavior="scroll" direction="left">Kyoko Kirigiri - Danganronpa Execution - Thick of it </marquee>
+                                    <marquee behavior="scroll" direction="left">Playing Music: Kyoko Kirigiri - Danganronpa Execution - Thick of it </marquee>
                                 </div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize"></button>
@@ -227,10 +240,6 @@
                 </aside>
             </div>
         </div>
-
-        <footer class="footer">
-            <h3>NOTHING</h3>
-        </footer>
     </div>
   </body>
 </html>

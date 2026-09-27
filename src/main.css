@@ -1,15 +1,10 @@
 
+@import url("./assets/variables.css");
+
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.35) #daeff5;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "CustomFont";
-  src: url('./assets/fonts/WesaysopersonaluseBold-L3oOZ.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 ::-webkit-scrollbar {
@@ -51,7 +46,6 @@ body {
     "header header header"
     "left main right"
     "left main right"
-    "footer footer footer "
   ;
 
   gap: 10px; 
@@ -61,26 +55,15 @@ body {
 .header{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 
-  border-style: solid;
-  border-width: 3px;
-  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
   grid-area: header;
   background-color: var(--main-bg-color);
-  min-height: 15vh;
+  min-height: 6vh;
 }
 
 .main-page{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 20px;
-
-  border-style: solid;
-  border-width: 3px;
-  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
   min-height:90vh;
   grid-area: main;
   background-color: var(--main-bg-color);
@@ -128,27 +111,21 @@ body {
   display: flex;
   align-items: center;
   justify-content:center;
-  border-style: solid;
-  border-width: 3px;
-  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
+
   grid-area: footer;
   background-color: var(--main-bg-color);
-  max-height:5vh;
+  max-height:8vh;
+  margin:0; padding:0;
 }
-
 
 /* HEADER */
 .title-menu{
-  display:flex;
-  justify-content: center;
-  align-items: end;
-
   margin: 0; padding:0;
 }
 
 .title{
-  font-family: 'CustomFont', sans-serif;
-  font-size: 7em;
+  font-family: var(--font-wesaysopersonalusebold);
+  font-size: 4em;
 
   margin: 0; padding: 0;
   text-align: -webkit-center;
@@ -216,9 +193,6 @@ h3 {
 
 /* left aside */
 .aside-left{
-  border-style: solid;
-  border-width: 3px;
-  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
   background-color: var(--main-bg-color);
 }
 
@@ -229,12 +203,6 @@ h3 {
   background-color: var(--main-bg-color);
 }
 
-.aside-right .window {
-  width: auto;
-  box-sizing: border-box;
-  margin: 0; 
-}
-
 .booting_computer{
   width: 100%;    
   height: 24vh;
@@ -242,20 +210,14 @@ h3 {
 }
 
 .second-aside-right{
-  display: flex;
-  justify-content: center;
-
-  border-style: solid;
-  border-width: 3px;
-  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 200; 
   background-color: var(--main-bg-color);
   min-width: 7vw;
 }
 
-.second-aside-right .window {
-  width: 100%;
+.window{
+  width: auto; height:100%;
   box-sizing: border-box;
-  margin: 0; 
+  margin: 0;
 }
 
 .window-body{
@@ -277,3 +239,15 @@ h3 {
   max-width: 8vw;    
   height: 22vh;
 }
+
+.footer > .window, .main-page > .window{
+  width:100%;
+}
+
+#main-content{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+

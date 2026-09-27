@@ -1,3 +1,73 @@
+@font-face {
+  font-family: "WesaysopersonaluseBold";
+  src: url('./fonts/WesaysopersonaluseBold-L3oOZ.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bpdots-3aYy";
+  src: url('./fonts/Bpdots-3aYy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FriedgooppersonaluseRegular";
+  src: url('./fonts/FriedgooppersonaluseRegular-rgOJ9.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GotHeroin";
+  src: url('./fonts/GotHeroin-5XoL.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HellspersonaluseRegular";
+  src: url('./fonts/HellspersonaluseRegular-L3zVZ.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IcecreamypersonaluseBold";
+  src: url('./fonts/IcecreamypersonaluseBold-3zgoy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KawayjampersonaluseRegular";
+  src: url('./fonts/KawayjampersonaluseRegular-DOj8m.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemondropspersonaluseBold";
+  src: url('./fonts/LemondropspersonaluseBold-9Yn02.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemondropspersonaluseBold2";
+  src: url('./fonts/LemondropspersonaluseBold-ywDEV.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PurplemagicdemoSvg";
+  src: url('./fonts/PurplemagicdemoSvg-x32mO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root{
   /* notfound */
   --notfound-bg-color: hsl(256, 100%, 20%);
@@ -9,5 +79,17 @@
   --bounce-mark-color: hsl(0, 0%, 100%);
 
     /* main */
-    --main-bg-color: hsl(255, 18%, 44%)
+    --main-bg-color: hsl(255, 18%, 44%);
+
+    /* Font-family */
+    --font-wesaysopersonalusebold: "WesaysopersonaluseBold", sans-serif;
+    --font-bpdots-3aYy: "bpdots-3aYy", sans-serif;
+    --font-FriedgooppersonaluseRegular: "FriedgooppersonaluseRegular", sans-serif;
+    --font-GotHeroin: "GotHeroin", sans-serif;
+    --font-HellspersonaluseRegular: "HellspersonaluseRegular", sans-serif;
+    --font-IcecreamypersonaluseBold: "IcecreamypersonaluseBold", sans-serif;
+    --font-KawayjampersonaluseRegular: "KawayjampersonaluseRegular", sans-serif;
+    --font-LemondropspersonaluseBold: "LemondropspersonaluseBold", sans-serif;
+    --font-LemondropspersonaluseBold2: "LemondropspersonaluseBold2", sans-serif;
+    --font-PurplemagicdemoSvg: "PurplemagicdemoSvg", sans-serif;
   }
