@@ -4,43 +4,43 @@ const playlist = [
   {
     title: "Kyoko Kirigiri - Danganronpa Execution - Thick of it",
     videoId: "cd5s0K9Il9Y",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title: "DECO*27 - Monitoring feat. Hatsune Miku",
     videoId: "kbNdx0yqbZE",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title: "rusino - Looping the Rooms (ループザルーム) feat. Hatsune Miku",
     videoId: "icBDYkfxpMs",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title: "Mesmerizer / Hatsune Miku＆Kasane Teto",
     videoId: "19y8YTbvri8",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title: "いますぐ輪廻（Retry Now）/ NAKISO feat. Hatsune Miku",
     videoId: "3iUgKH8c7p4",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title: "[MV] ABM - '次元通信' (Signaling) Hatsune Miku & Kasane Teto",
     videoId: "PqpCRSOUuIE",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title:
       "バゥムクゥヘン・エンドロゥル / 雨良 feat.初音ミクVS重音テトVS亞北ネル(Baumkuchen End Credits / Amala ft.Miku vs Teto vs Neru)",
     videoId: "Dz5rALpx06M",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
   {
     title: "Tetoris / Kasane Teto",
     videoId: "Soy4jGPHr3g",
-    // albumCover: "/src/img/albumCovers",
+    albumCover: "/src/img/albumCovers",
   },
 ];
 
@@ -99,23 +99,3 @@ function prevTrack() {
 
 // Initialize
 playTrack(0);
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("youtube-player", {
-    width: "200",
-    height: "200",
-    videoId: "cd5s0K9Il9Y",
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      loop: 1,
-      playlist: "cd5s0K9Il9Y",
-    },
-    events: {
-      onReady: function (event) {
-        event.target.setVolume(10);
-        event.target.playVideo();
-      },
-    },
-  });
-}

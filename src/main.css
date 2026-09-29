@@ -49,7 +49,7 @@ body {
   ;
 
   gap: 10px; 
-  margin:1vh 10vw;
+  margin:1vh 5vw;
 }
 
 .header{
@@ -65,8 +65,13 @@ body {
 
 .main-page{
   min-height:90vh;
-  grid-area: main;
   background-color: var(--main-bg-color);
+  grid-area: main;
+
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: rgb(101, 100, 100) rgb(184, 183, 181);
+  scrollbar-width: thin;
 }
 
 .left,
@@ -201,6 +206,13 @@ h3 {
   margin-bottom: 15px;
   border-radius: 5px;
   background-color: var(--main-bg-color);
+}
+
+.aside-right:nth-child(2) {
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: rgb(101, 100, 100) rgb(184, 183, 181);
+  scrollbar-width: thin;
 }
 
 .booting_computer{
